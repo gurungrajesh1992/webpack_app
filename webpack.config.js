@@ -1,37 +1,49 @@
-const path = require('path');
+const path = require("path");
 // const htmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-    entry: path.join(__dirname, "src", "index.js"),
+  entry: path.join(__dirname, "src", "index.js"),
 
-    output: {
-        path: path.resolve(__dirname, "dist")
-    },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+  },
 
-    mode: 'development',
+  mode: "development",
 
-    module: {
-        rules: [
-            {
-                test: /\.?js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react']
-                    }
-                }
-            },
-        ]
-    },
+  module: {
+    rules: [
+      {
+        test: /\.?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
+      },
+      // CSS rules
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
 
-    devServer: {
-        historyApiFallback: true,
-    },
+      //images
 
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, "src", "index.html"),
-        }),
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
-}
+  },
+
+  devServer: {
+    historyApiFallback: true,
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "index.html"),
+    }),
+  ],
+};
