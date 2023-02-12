@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectAlllists } from "./MovieSlice";
 import Accordion from "../common/Accordion";
@@ -14,6 +15,9 @@ const MovieLists = () => {
   return (
     <section>
       <h2>Movie List</h2>
+      <Link to="/">
+        <p>Home</p>
+      </Link>
       {content}
     </section>
   );

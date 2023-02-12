@@ -19,7 +19,10 @@ const Accordion = ({ item }) => {
   return (
     <div className="accordion__section">
       <button className={`accordion ${active}`} onClick={toggleAccordion}>
+        <div className="image"><img src={item.image} className="square" alt="" /></div>
         <p className="accordion__title">{item.title}</p>
+        <p className="category">{item.category_id}</p>
+        <p className="director">{item.director_id}</p>
       </button>
       <div
         ref={content}
@@ -30,6 +33,9 @@ const Accordion = ({ item }) => {
           className="accordion__text"
           dangerouslySetInnerHTML={{ __html: item.content }}
         />
+        <button>
+          Add to wish
+        </button>
       </div>
     </div>
   );

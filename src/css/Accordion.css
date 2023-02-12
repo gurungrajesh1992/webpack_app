@@ -56,3 +56,26 @@
   font-size: 14px;
   padding: 18px;
 }
+
+.image img {
+  height: 150px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.home {
+  text-align: -webkit-center;
+}
+
+a.movie_link {
+  text-decoration: none;
+  color: #fff;
+}
+
+p.movie_button {
+  background: orange;
+  width: 100px;
+  padding: 7px;
+  text-decoration: none;
+  border-radius: 5px;
+}
