@@ -17,25 +17,29 @@ const Accordion = ({ item }) => {
     );
   };
   return (
-    <div className="accordion__section">
-      <button className={`accordion ${active}`} onClick={toggleAccordion}>
-        <div className="image"><img src={item.image} className="square" alt="" /></div>
-        <p className="accordion__title">{item.title}</p>
-        <p className="category">{item.category_id}</p>
-        <p className="director">{item.director_id}</p>
-      </button>
-      <div
-        ref={content}
-        style={{ maxHeight: `${height}` }}
-        className="accordion__content"
-      >
-        <div
-          className="accordion__text"
-          dangerouslySetInnerHTML={{ __html: item.content }}
-        />
-        <button>
-          Add to wish
+    <div className="container">
+      <div className="accordion__section">
+        <button className={`accordion ${active}`} onClick={toggleAccordion}>
+          <div className="image"><img src={item.image} className="square" alt="" /></div>
+          <div className="text">
+            <p className="accordion__title">{item.title}</p>
+            <p className="category">{item.category_id}</p>
+            <p className="director">{item.director_id}</p>
+          </div>
         </button>
+        <div
+          ref={content}
+          style={{ maxHeight: `${height}` }}
+          className="accordion__content"
+        >
+          <div
+            className="accordion__text"
+            dangerouslySetInnerHTML={{ __html: item.content }}
+          />
+          <button>
+            Add to wish
+          </button>
+        </div>
       </div>
     </div>
   );
