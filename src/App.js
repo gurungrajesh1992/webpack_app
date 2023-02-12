@@ -9,13 +9,10 @@ const App = () => {
     <div className="wrapper">
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/"> */}
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/movies" element={<MovieLists />} />
           {/* <Home /> */}
-          {/* </Route> */}
-          {/* sushant */}
         </Routes>
       </BrowserRouter>
     </div>
