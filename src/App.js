@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 import Home from "./features/home/Home";
 import MovieLists from "./features/movies/MovieLists";
