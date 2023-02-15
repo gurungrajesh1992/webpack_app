@@ -7,31 +7,31 @@ import coco from "../../images/coco.jpg";
 const initialState = {
   lists: [
     {
-      id: "1",
+      id: 1,
       title: "Interstellar",
       image: interstaller,
       content:
-        "This is content Interstellar.This is content Interstellar.This is content Interstellar.This is content Interstellar.",
-      director_id: "director1",
-      category_id: "category1",
+        "This is content Interstellar.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      director_id: 1,
+      category_id: 1,
     },
     {
       id: "2",
       title: "Coco",
       image: coco,
       content:
-        "This is content Coco.This is content Coco.This is content Coco.This is content Coco.",
-      director_id: "director2",
-      category_id: "category2",
+        "This is content Coco.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      director_id: 2,
+      category_id: 2,
     },
     {
       id: "3",
       title: "Magadhira",
       image: magadheera,
       content:
-        "This is content Magadhira.This is content Magadhira.This is content Magadhira.This is content Magadhira.",
-      director_id: "director3",
-      category_id: "category3",
+        "This is content Magadhira.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      director_id: 3,
+      category_id: 3,
     },
   ],
   //   status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'

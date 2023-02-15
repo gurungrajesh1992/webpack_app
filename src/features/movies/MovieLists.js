@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectAlllists } from "./MovieSlice";
 import Accordion from "../common/Accordion";
+import MovieTop from "./MovieTop";
 import { Container, Row, Col } from "react-bootstrap";
 
 const MovieLists = () => {
@@ -15,19 +16,18 @@ const MovieLists = () => {
   content = orderedLists.map((item) => <Accordion key={item.id} item={item} />);
   return (
     <section>
+      <MovieTop />
       <Container>
         <Row>
-          <Col md={3}>xs=12 md=8</Col>
+          <Col md={3}></Col>
           <Col md={6}>
-            <h2>Movie List</h2>
-            <Link to="/">
-              <p>Home</p>
-            </Link>
+            <div className="contentWrapper">
+              {content}
+            </div>
           </Col>
-          <Col md={3}>xs=6 md=4</Col>
+          <Col md={3}></Col>
         </Row>
       </Container>
-      {content}
     </section>
   );
 };

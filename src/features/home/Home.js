@@ -6,8 +6,9 @@ const Home = () => {
     <div className="home">
       <h2>Home Page</h2>
       <h4>Rajesh Gurung !!!</h4>
-      <h5>Designed & Developed By : Rajesh Gurung</h5>
-      <h6>Please click below button to go to Movie List !!!</h6>
+      <p>9811956191</p>
+      <p>gurungrajesh1992@gmail.com</p>
+      <p>Please click below button to go to Movie List !!!</p>
       <Link to="/movies" className="movie_link">
         <p className="movie_button">Movie List</p>
       </Link>

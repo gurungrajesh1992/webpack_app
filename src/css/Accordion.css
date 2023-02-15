@@ -13,27 +13,27 @@
 }
 
 .accordion {
-  background-color: #eee;
+  background-color: #fff;
   color: #444;
   cursor: pointer;
   padding: 18px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   border: none;
   outline: none;
   transition: background-color 0.6s ease;
-  justify-content: space-between;
 }
 
 .accordion:hover,
 .active {
-  background-color: #ccc;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #ddd;
 }
 
 .accordion__title {
   font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .accordion__icon {
@@ -49,6 +49,7 @@
   background-color: white;
   overflow: hidden;
   transition: max-height 0.6s ease;
+  box-shadow: 2px 2px 5px #ddd;
 }
 
 .accordion__text {
@@ -56,11 +57,14 @@
   font-weight: 400;
   font-size: 14px;
   padding: 18px;
+  line-height: 28px;
+  color: #706a6a;
+  text-align: justify;
 }
 
-.image img {
+.imgItem {
   height: 150px;
-  width: 200px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -81,11 +85,43 @@ p.movie_button {
   border-radius: 5px;
 }
 
-.container {
-  width: 500px;
-  margin: 5% auto;
-}
-
 .accordion p {
   width: 100%;
+}
+
+.wrapper {
+  text-align: -webkit-center;
+  background: #000;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+h2.homeTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.home h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contentWrapper {
+  background: #fff;
+  padding: 15px;
+}
+
+.image {
+  height: 150px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.buttonadd {
+  margin-bottom: 20px;
+}
+
+p.director {
+  font-size: 20px;
+  font-weight: 400;
 }
