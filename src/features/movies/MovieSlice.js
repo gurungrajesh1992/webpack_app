@@ -34,9 +34,11 @@ const initialState = {
       category_id: 3,
     },
   ],
-  //   status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
-  //   error: null,
+  status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
+  error: null,
 };
+
+
 
 export const MovieSlice = createSlice({
   name: "movies",

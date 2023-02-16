@@ -4,7 +4,7 @@ import { selectAllDirectors } from "../directors/DirectorsSlice";
 
 const MovieDirector = ({ handleClick, directorId }) => {
   const directors = useSelector(selectAllDirectors);
-  console.log(directors);
+  // console.log(directors);
   const director = directors.find((director) => director.id === directorId);
   return (
     <p className="director" variant="primary" onClick={handleClick}>

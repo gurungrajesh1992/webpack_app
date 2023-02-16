@@ -30,10 +30,37 @@ const Excerpt = ({ item }) => {
     e.stopPropagation();
     setShow(false);
   };
+
   const handleShow = (e) => {
     e.stopPropagation();
     setShow(true);
   };
+
+  const addToWish = () => {
+    const promise = new Promise(function (resolve, reject) {
+      // call resolve if the method succeeds
+      setTimeout(function () {
+        const didSucceed = Math.random();
+        // console.log(Math.random());
+        if (didSucceed > 0.5) {
+          resolve('Success')
+        } else {
+          reject('Error');
+        }
+      }, 1000);
+    })
+    // ServicesOne(`Movie Added`)
+    promise.then(
+      (result) => {
+        console.log(result);
+        ServicesOne(`${item.title} Movie Added`)
+      },
+      (error) => {
+        console.log(error);
+        ServicesOne(`Unable To Add Movie`)
+      }
+    )
+  }
   return (
     <div className="container">
       <div className="accordion__section">
@@ -80,11 +107,8 @@ const Excerpt = ({ item }) => {
             className="accordion__text"
             dangerouslySetInnerHTML={{ __html: item.content }}
           />
-          {/* <button className="buttonadd btn btn-sm btn-primary" onClick={ServicesOne()}>
-            Add to wish
-          </button> */}
-          <CommonButton handleClick={ServicesOne()} text={"Add to Wish"} />
-          <Toast />
+          {/* ServicesOne(`${item.title} Movie Added`) */}
+          <CommonButton handleClick={addToWish} text={`Add to Wish`} />
         </div>
       </div>
     </div>

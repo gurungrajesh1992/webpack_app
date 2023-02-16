@@ -66,10 +66,7 @@
   height: 150px;
   width: 100%;
   object-fit: cover;
-}
-
-.home {
-  text-align: -webkit-center;
+  margin-bottom: 15px;
 }
 
 a.movie_link {
@@ -128,4 +125,10 @@ p.director {
 
 .text {
   display: inline-block;
+}
+
+.home {
+  height: 97vh;
+  text-align: -webkit-center;
+  padding-top: 50px;
 }

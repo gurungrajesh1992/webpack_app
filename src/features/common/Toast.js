@@ -14,9 +14,11 @@ import { toast } from "react-toastify";
 
 // export default Toast
 
-export const ServicesOne = () => {
-  const notify = () => toast("Movie Added To Wish List");
-  return notify;
+export const ServicesOne = (message) => {
+  // console.log(message);
+  toast(message);
+  // const notify = () => toast(message);
+  // return notify;
 };
 
 export const Toast = () => {
