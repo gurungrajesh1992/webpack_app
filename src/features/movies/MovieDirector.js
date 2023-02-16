@@ -4,6 +4,7 @@ import { selectAllDirectors } from "../directors/DirectorsSlice";
 
 const MovieDirector = ({ DirectorId }) => {
   const directors = useSelector(selectAllDirectors);
+  console.log(directors);
   const director = directors.find((director) => director.id === DirectorId);
 
   return (

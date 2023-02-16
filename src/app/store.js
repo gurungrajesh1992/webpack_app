@@ -7,7 +7,7 @@ import CategorySlice from "../features/categories/CategorySlice";
 export const store = configureStore({
   reducer: {
     movies: movieReducer,
-    deirectors: DirectorsSlice,
+    directors: DirectorsSlice,
     categories: CategorySlice,
   },
 });
