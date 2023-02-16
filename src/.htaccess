@@ -1,5 +1,0 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On RewriteBase /webpack_app/ RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /webpack_app/index.html [L]
-</IfModule>
