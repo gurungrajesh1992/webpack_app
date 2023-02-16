@@ -1,8 +1,6 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { Col, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 
 import "../../css/Accordion.css";
 
@@ -10,6 +8,7 @@ import { Toast, ServicesOne } from "../common/Toast";
 import CommonButton from "../common/CommonButton";
 import MovieDirector from "./MovieDirector";
 import MovieCategory from "./MovieCategory";
+import PopupModal from "./PopupModal";
 
 const Excerpt = ({ item }) => {
   const [active, setActive] = useState("");
@@ -43,24 +42,24 @@ const Excerpt = ({ item }) => {
         const didSucceed = Math.random();
         // console.log(Math.random());
         if (didSucceed > 0.5) {
-          resolve('Success')
+          resolve("Success");
         } else {
-          reject('Error');
+          reject("Error");
         }
       }, 1000);
-    })
+    });
     // ServicesOne(`Movie Added`)
     promise.then(
       (result) => {
         console.log(result);
-        ServicesOne(`${item.title} Movie Added`)
+        ServicesOne(`${item.title} Movie Added`);
       },
       (error) => {
         console.log(error);
-        ServicesOne(`Unable To Add Movie`)
+        ServicesOne(`Unable To Add Movie`);
       }
-    )
-  }
+    );
+  };
   return (
     <div className="container">
       <div className="accordion__section">
@@ -72,28 +71,16 @@ const Excerpt = ({ item }) => {
             <Col md={6}>
               <div className="text">
                 <h1 className="accordion__title">{item.title}</h1>
-
                 <MovieCategory categoryId={item.category_id} />
                 <MovieDirector
                   handleClick={handleShow}
                   directorId={item.director_id}
                 />
-                <Modal
+                <PopupModal
+                  directorId={item.director_id}
+                  handleClick={handleClose}
                   show={show}
-                  onHide={handleClose}
-                  backdrop="static"
-                  keyboard={false}
-                >
-                  <Modal.Header>
-                    <Modal.Title>{item.director_id}</Modal.Title>
-                    <Button variant="primary" onClick={handleClose}>
-                      X
-                    </Button>
-                  </Modal.Header>
-                  <Modal.Body>
-                    Woohoo, you're reading this text in a modal!
-                  </Modal.Body>
-                </Modal>
+                />
               </div>
             </Col>
           </Row>
