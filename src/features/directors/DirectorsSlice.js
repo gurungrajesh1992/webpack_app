@@ -38,6 +38,6 @@ export const DirectorSlice = createSlice({
   reducers: {},
 });
 
-export const selectAllDirectors = (state) => state.directors;
+export const selectAllDirectors = (state) => state.directors.directors;
 
 export default DirectorSlice.reducer;

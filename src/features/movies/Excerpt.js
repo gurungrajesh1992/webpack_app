@@ -9,6 +9,7 @@ import "../../css/Accordion.css";
 import { Toast, ServicesOne } from "../common/Toast";
 import CommonButton from "../common/CommonButton";
 import MovieDirector from "./MovieDirector";
+import MovieCategory from "./MovieCategory";
 
 const Excerpt = ({ item }) => {
   const [active, setActive] = useState("");
@@ -44,10 +45,12 @@ const Excerpt = ({ item }) => {
             <Col md={6}>
               <div className="text">
                 <h1 className="accordion__title">{item.title}</h1>
-                <MovieDirector />
-                <p className="director" variant="primary" onClick={handleShow}>
-                  {item.director_id}
-                </p>
+
+                <MovieCategory categoryId={item.category_id} />
+                <MovieDirector
+                  handleClick={handleShow}
+                  directorId={item.director_id}
+                />
                 <Modal
                   show={show}
                   onHide={handleClose}
