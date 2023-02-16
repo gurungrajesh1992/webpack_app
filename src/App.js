@@ -10,7 +10,7 @@ import MovieLists from "./features/movies/MovieLists";
 const App = () => {
   return (
     <div className="wrapper">
-      <BrowserRouter>
+      <BrowserRouter basename={"/webpack_app"}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />

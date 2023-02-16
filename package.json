@@ -1,6 +1,7 @@
 {
   "name": "movies",
   "version": "1.0.0",
+  "homepage": "http://gurungrajesh1992.github.io/webpack_app}",
   "description": "movies list",
   "main": "index.js",
   "scripts": {
