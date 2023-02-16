@@ -1,14 +1,14 @@
 {
   "name": "movies",
   "version": "1.0.0",
-  "homepage": "/icfc-alpha",
+  "homepage": "http://gurungrajesh1992.github.io/webpack_app",
   "description": "movies list",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "webpack"
   },
   "author": "",
