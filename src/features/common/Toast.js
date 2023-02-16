@@ -1,6 +1,5 @@
-import React from 'react'
-import { toast } from 'react-toastify';
-
+import React from "react";
+import { toast } from "react-toastify";
 
 // const Toast = () => {
 //     const notify = () => toast("Movie Added To Wish List");
@@ -16,14 +15,10 @@ import { toast } from 'react-toastify';
 // export default Toast
 
 export const ServicesOne = () => {
-    const notify = () => toast("Movie Added To Wish List");
-    return (
-        notify
-    );
+  const notify = () => toast("Movie Added To Wish List");
+  return notify;
 };
 
 export const Toast = () => {
-    return (
-        <></>
-    );
+  return <></>;
 };

@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { selectAlllists } from "./MovieSlice";
-import Accordion from "../common/Accordion";
+
 import MovieTop from "./MovieTop";
-import { Container, Row, Col } from "react-bootstrap";
+import Excerpt from "./Excerpt";
 
 const MovieLists = () => {
   const lists = useSelector(selectAlllists);
@@ -13,7 +13,7 @@ const MovieLists = () => {
 
   const orderedLists = lists.slice().sort((a, b) => a.id - b.id);
 
-  content = orderedLists.map((item) => <Accordion key={item.id} item={item} />);
+  content = orderedLists.map((item) => <Excerpt key={item.id} item={item} />);
   return (
     <section>
       <MovieTop />
@@ -21,9 +21,7 @@ const MovieLists = () => {
         <Row>
           <Col md={3}></Col>
           <Col md={6}>
-            <div className="contentWrapper">
-              {content}
-            </div>
+            <div className="contentWrapper">{content}</div>
           </Col>
           <Col md={3}></Col>
         </Row>

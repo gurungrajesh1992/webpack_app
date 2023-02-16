@@ -125,3 +125,7 @@ p.director {
   font-size: 20px;
   font-weight: 400;
 }
+
+.text {
+  display: inline-block;
+}
